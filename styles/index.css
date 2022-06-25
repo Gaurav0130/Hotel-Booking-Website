@@ -2,20 +2,21 @@ body{
     margin: 0;
     padding: 0;
 }
-img{
-    width: 150px;
+/*index header*/
+.logo{
+    height: 60px;
+    width: 60px;
+}
+.Content img{
     height: 150px;
+    width: 150px;
 }
-.imgsection img{
-    height: 300px;
-    width: 300px;
+/*list.html*/
+#list-view img {
+    width: 250px;
+    height: 200px;
 }
-
-.detailimg img{
-    height: auto;
-    width: auto;
-}
-/* footer */
+/* footer icon */
 #logoicon img{
     height: 20px;
     width: 22px;
@@ -30,4 +31,9 @@ img{
 /*login.html*/
 .login{
     padding: 10px;
+}
+/*payment*/
+.detailimg img{
+    height: 500px;
+    width: 500px;
 }
