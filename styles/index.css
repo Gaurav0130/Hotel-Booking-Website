@@ -6,3 +6,20 @@ img{
     width: 150px;
     height: 150px;
 }
+.imgsection img{
+    height: 300px;
+    width: 300px;
+}
+
+.detailimg img{
+    height: auto;
+    width: auto;
+}
+/* footer */
+#logoicon img{
+    height: 20px;
+    width: 22px;
+}
+.copyright:before{
+    content: '\00A9';
+}
