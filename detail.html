@@ -22,7 +22,33 @@
                 <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="">
             </div>
             <div>
-                <a href="payment.html">Book now</a>
+                <form action="payment.html" method="get" autocomplete="off">
+                    <label for="Adults">Adults:</label>
+                    <input type="number" id="no" name="no" min="1" required><br>
+                    <label for="Name:">Name:</label>
+                    <input type="text" id="text" name="text" required><br>
+                    <label for="form-Date:">Form Date:</label>
+                    <input type="date" id="formdate" name="formdate" required min="2022-07-01"><br>
+                    <label for="to Date">To Date:</label>
+                    <input type="date" id="todate" name="todate" required min="2022-07-02"><br>
+                    <label for="Total">Total:</label>
+                    <input type="text" id="text" name="text" disabled><br>
+                    <input type="submit" value="Book now">
+                </form>
+                <!--
+                    <form action="payment.html" autocomplete="off">
+                        <label for="Adults">Adults:</label>
+                        <input type="number" id="no" name="number" min="1"><br>
+                        <label for="Name:">Name:</label>
+                        <input type="text" id="text" name="text" required><br>
+                        <label for="orm Date:">Form Date:</label>
+                        <input type="form-date" id="form-date" name="date" required min="2022-07-01"><br>
+                        <label for="to Date">To Date:</label>
+                        <input type="to-date" id="to-date" name="to-date" required min="2022-07-02"><br>
+                        <label for="Total">Total:</label>
+                        <input type="text" id="text" name="text" disabled><br>
+                        <input type=button value='Book now'>
+                    </form>-->
             </div>
             <div class="Descriptions">
                 <h2>Raisson Blu Hotel</h2>
@@ -41,7 +67,6 @@
                 <h5>DESCRIPTION</h5>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, iure dicta quo amet nulla praesentium tempore. Itaque tempore accusantium odit maiores ut, aperiam, illo, iure odio consequatur necessitatibus similique atque?
             </div>
-
         </div>
         <!--Footer-->
         <div class="footer">
