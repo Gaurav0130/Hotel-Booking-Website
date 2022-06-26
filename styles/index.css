@@ -1,20 +1,67 @@
 body{
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
     margin: 0;
     padding: 0;
+    background-color: #e0e0e0;
 }
 /*index header*/
+header{
+    background-color: rosybrown;
+}
 .logo{
     height: 60px;
     width: 60px;
 }
-.Content img{
+.cityimg img{
     height: 150px;
     width: 150px;
+}
+/* index container*/
+.searchbar{
+    height: 380px;
+    background-image: url(https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.citycard{
+    margin: 0 15%;
+}
+.citycard img{
+    padding: 4%;
+    border-radius: 25%;
+}
+
+/* index footer*/
+footer{
+    background-color: rosybrown;
 }
 /*list.html*/
 #list-view img {
     width: 250px;
     height: 200px;
+}
+/* list content img*/
+#list-view{
+    width: 40%;
+    height: auto;
+    margin: 2%;
+    background-color: rgb(132,136,139);
+}
+/* detial.html*/
+.detailimg{
+    margin: 2% 4% 0 4%;
+}
+.detailfrom{
+    margin: 0 4% 1% 4%;
+}
+.DeltailDes{
+    margin: 1% 4% 2% 4%;
 }
 /* footer icon */
 #logoicon img{
@@ -37,3 +84,36 @@ body{
     height: 500px;
     width: 500px;
 }
+.paymentimg img{
+    height: 500px;
+    width: 500px;
+}
+.paydetail{
+    margin: 2%;
+}
+.payimgdesc{
+    background-color:rgb(132,136,139);
+    width: 50%;
+    height: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+.payfin{
+    margin: 2%;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 1% 2%;
+}
+.loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
