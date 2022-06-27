@@ -11,7 +11,22 @@ body{
 }
 /*index header*/
 header{
+    overflow: hidden;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+.main-container{
     background-color: rosybrown;
+}
+.main-container img{
+    margin-bottom: -5px;
+}
+.main-container a{
+    text-decoration: none;
+    color: black;
+    float: right;
+    padding: 20px;
 }
 .logo{
     height: 60px;
@@ -22,12 +37,30 @@ header{
     width: 150px;
 }
 /* index container*/
-.searchbar{
+.seactionbar{
     height: 380px;
     background-image: url(https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-top: 4%;
+}
+
+.searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 430px;
+}
+.searchbar input{
+    background-color: f1f1f1;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px transparent solid;
+    padding-inline-start: 10px;
+    font-size: 26px;
+    width: 27%;
+    margin-left: 24px;
 }
 .citycard{
     margin: 0 15%;
@@ -35,11 +68,41 @@ header{
 .citycard img{
     padding: 4%;
     border-radius: 25%;
+    padding-left: 56px;
 }
-
+.viewmore{
+    text-align: center;
+}
+.viewmore a{
+    text-decoration: none;
+    color: black;
+}
 /* index footer*/
-footer{
+.footer{
     background-color: rosybrown;
+    overflow: hidden;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+.footer a {
+    text-decoration: none;
+    color: black;
+    float: left;
+}
+#logoicon{
+    float: right;
+    margin-right: 1%;
+    margin-top: -8px;
+}
+.Contact{
+    padding: 1%;
+}
+.copyright{
+    text-align: center;
+    font-size: 10px;
+    padding-top: 10px;
+    color: black;
 }
 /*list.html*/
 #list-view img {
@@ -106,6 +169,11 @@ footer{
     border-radius: 5px;
     padding: 1% 2%;
 }
+.paynow a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 .loader {
     border: 12px solid #f3f3f3;
     border-radius: 50%;
@@ -116,4 +184,4 @@ footer{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
