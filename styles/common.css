@@ -4,7 +4,6 @@
   font-family: "Ubuntu", sans-serif;
   overflow-x: hidden;
 }
-
 /* common css for header login and contact poppa box and footer for all pages  */
 /* header css */
 body {
@@ -338,7 +337,7 @@ body {
   */
 
     /* contact us box */
-     #contactbtn {
+#contactbtn {
     font-size: 1.7rem;
   }
   #contactusbox h2 {
