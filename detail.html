@@ -11,32 +11,48 @@
 <body>
     <div class="container">
         <!--Header-->
-        <header>
-            <a href="index.html">
-                <img class="logo" src="assests/images/logo.png" alt="logo" >
-            </a>
-            <a href="login.html">Login</a>
+        <header class="main-container">
+            <div class="head-row">
+                <div class="head-col">
+                    <img class="logo" src="assests/images/logo.png" alt="logo" >
+                </div>
+                <div class="head-col">
+                    <a href="login.html">Login</a>
+                </div>
+            </div>
         </header>
         <!--Main Container-->
         <div class="Content">
+            <div class="detailimgform">
             <div class="detailimg">
                 <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="">
             </div>
-            <div class="detailfrom">
-                <form action="payment.html" method="get" autocomplete="off">
-                    <label for="Adults">Adults:</label>
-                    <input type="number" id="no" name="no" min="1" required><br>
-                    <label for="Name:">Name:</label>
-                    <input type="text" id="text" name="text" required><br>
-                    <label for="form-Date:">Form Date:</label>
-                    <input type="date" id="formdate" name="formdate" required min="2022-07-01"><br>
-                    <label for="to Date">To Date:</label>
-                    <input type="date" id="todate" name="todate" required min="2022-07-02"><br>
-                    <label for="Total">Total:</label>
-                    <input type="text" id="text" name="text" disabled><br>
-                    <input type="submit" value="Book now">
-                </form>
+            <div id="detailboxform">
+                <div id="detailboxformdiv2">
+                <div class="formaitam">
+                    <label for="number">Adult :</label><input type="number" value="">
+                </div>
+                <div class="formaitam">
+                    <label for="text">Name :</label><input type="text" value="">
+                </div>
+                <div class="formaitam">
+                    <label  for="date">From :</label><input  type="date" value="">
+                </div>
+                <div class="formaitam">
+                    <label  for="date">To date :</label><input  type="date" value="">
+                </div>
+                <div class="formaitam">
+                    <label for="text">Total :</label><input type="text" value="">
+                </div>
+                <div class="formaitmbtn">
+                    <a href="payment.html">
+                <button id="bookbtn" >Book Now</button>
+                </a>
+                </div>
             </div>
+                </div>
+            </div>
+        </div>
             <div class="DeltailDes">
                 <h2>Raisson Blu Hotel</h2>
                 <h4>RATING</h4>
@@ -56,16 +72,18 @@
             </div>
         </div>
         <!--Footer-->
-        <footer>
-            <div class="Contact">
-                <a href="contact.html" target="_blank">Contact Us</a>
-            </div>
-            <div id="logoicon">
+        <footer class="footer">
+            <div class="footer-bar">
+                <div id="Contact" >
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div id="copyright"><p> 2020 ROOM SEARCH PVT.LTD.</p></div>
+                <div id="logoicon">
                     <a href="https://www.facebook.com"><img src="assests/images/facebook.png" alt="Facebook"></a>
-                    <a href="https://twitter.com"><img src="assests/images/twitter.png" alt="twitter"></a>
                     <a href="https://www.instagram.com"><img src="assests/images/instagram.png" alt="instagram"></a>
+                    <a href="https://twitter.com"><img src="assests/images/twitter.png" alt="twitter"></a>
+                </div>
             </div>
-            <div class="copyright"> 2020 ROOM SEARCH PVT.LTD.</div>
         </footer>
     </div>
 </body>

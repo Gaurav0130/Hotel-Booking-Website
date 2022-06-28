@@ -1,13 +1,9 @@
 body{
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
-    height:100%;
-    width:100%;
     margin: 0;
     padding: 0;
     background-color: #e0e0e0;
+    font-family: Ubuntu, sans-serif;
+    box-sizing: border-box;
 }
 /*index header*/
 header{
@@ -15,26 +11,29 @@ header{
     top: 0;
     position: fixed;
     width: 100%;
-}
-.main-container{
     background-color: rosybrown;
 }
-.main-container img{
-    margin-bottom: -5px;
+.head-row{
+    display: flex;
+}
+.head-col:first-child {
+    flex-grow: 1;
+    margin-left: 2%;
+}
+.head-col:last-child{
+    flex-grow: 1;
+    padding: 20px 0;
+    margin-right: 2%;
 }
 .main-container a{
     text-decoration: none;
     color: black;
     float: right;
-    padding: 20px;
 }
+
 .logo{
     height: 60px;
     width: 60px;
-}
-.cityimg img{
-    height: 150px;
-    width: 150px;
 }
 /* index container*/
 .seactionbar{
@@ -43,32 +42,48 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin-top: 4%;
 }
 
 .searchbar{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 430px;
+    height: 380px;
 }
 .searchbar input{
-    background-color: f1f1f1;
-    font-size: 16px;
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    padding-inline-start: 14px;
     border-radius: 12px;
-    border: 1px transparent solid;
-    padding-inline-start: 10px;
-    font-size: 26px;
-    width: 27%;
-    margin-left: 24px;
+    font-size: 16px;
+    outline: none;
+    border: none;
 }
-.citycard{
-    margin: 0 15%;
+
+.cityimg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 40px;
+    
 }
 .citycard img{
-    padding: 4%;
-    border-radius: 25%;
-    padding-left: 56px;
+    border-radius: 30%;
+    height: 150px;
+    width: 150px;
+    box-shadow: 10px 10px 10px grey;
+}
+.city-overlay{
+    margin-top: -55%;
+    margin-left: 35%;
+}
+.city-hover:hover{
+    opacity: 0.3;
 }
 .viewmore{
     text-align: center;
@@ -76,56 +91,163 @@ header{
 .viewmore a{
     text-decoration: none;
     color: black;
+    display: inline-block;
+    margin-top: 6%;
 }
 /* index footer*/
 .footer{
     background-color: rosybrown;
-    overflow: hidden;
+    overflow: visible;
     bottom: 0;
     position: fixed;
     width: 100%;
 }
+.footer-bar{
+    display: flex;
+    justify-content:space-between;
+}
+.footer-bar #Contact{
+    padding: 20px 0;
+    margin-left: 1%;
+}
+.footer-bar #logoicon{
+    padding: 20px 0;
+    margin-right: 1%;
+}
+.footer-bar #copyright{
+    margin-top: 1%;
+}
 .footer a {
     text-decoration: none;
     color: black;
-    float: left;
-}
-#logoicon{
-    float: right;
-    margin-right: 1%;
-    margin-top: -8px;
-}
-.Contact{
-    padding: 1%;
 }
 .copyright{
-    text-align: center;
     font-size: 10px;
-    padding-top: 10px;
     color: black;
 }
 /*list.html*/
+#list-view h3 h5{
+    text-decoration: none;
+    color: black;
+}
 #list-view img {
     width: 250px;
     height: 200px;
 }
 /* list content img*/
-#list-view{
-    width: 40%;
+.list-view{
+    width: 100%;
     height: auto;
-    margin: 2%;
-    background-color: rgb(132,136,139);
+    margin-top: 4%;
+}
+.list-view ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0 40%;
+}
+
+.list-view ul li a{
+    color: black;
+    text-decoration: none;
+}
+.list-view ul li:last-child{
+    flex-grow: 1;
+}
+.list-view ul li:first-child{
+    flex-grow: 1;
+}
+#map-view{
+    display: none;
+    visibility: hidden;
+}
+.cityimglist{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.citydescription{
+    margin: 2% 4%;
+}
+#list-view{
+    display: flex;
+    background-color: lightgray;
+}
+#list-view a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+#list-view-col:last-child{
+    padding: 0 5%;
+    width: 250px;
+}
+.list-view-row{
+    margin-top: 5%;
 }
 /* detial.html*/
 .detailimg{
     margin: 2% 4% 0 4%;
 }
-.detailfrom{
-    margin: 0 4% 1% 4%;
-}
+
 .DeltailDes{
     margin: 1% 4% 2% 4%;
 }
+.detailimgform{
+    display: flex;
+    margin: 8% 2%;
+    border: 1px solid black;
+    height: 400px;
+
+}
+.detailimg{
+    flex-grow: 3;
+}
+.detailimg img{
+    max-width: 400px;
+    max-height: 350px;
+    margin:0 22%;
+}
+.detailfrom{
+    flex-grow: 1;
+    border-left: 1px solid black;
+}
+/* detail delete*/
+#detailboxform {
+    width: 40%;
+    height: 100%;
+  }
+  
+  #detailboxformdiv2 {
+    width: 93%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 1px solid rgb(187, 21, 21); */
+  }
+  
+  .formaitam {
+    width: 80%;
+    height: 10%;
+    /* border: 1px solid rgb(0, 0, 0); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .formaitam input {
+    width: 50%;
+    height: 65%;
+  }
+  
+  #bookbtn {
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    overflow: hidden;
+  }
 /* footer icon */
 #logoicon img{
     height: 20px;
@@ -147,27 +269,48 @@ header{
     height: 500px;
     width: 500px;
 }
+
 .paymentimg img{
-    height: 500px;
-    width: 500px;
+    height: 240px;
+    width: 300px;
+    flex-grow: 1;
+}
+.payhotdesc{
+    flex-grow: 2;
+    pad: 6% 6% 6% 2%;
 }
 .paydetail{
     margin: 2%;
 }
 .payimgdesc{
     background-color:rgb(132,136,139);
-    width: 50%;
+    width: 53%;
     height: 20%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2%;
+    margin-top: 10%;
+    display: flex;
+}
+.paydetailall{
+    display: flex;
+    border: 1px solid black;
+    margin: 5%;
+    border-radius: 5px;
+    background-color: rosybrown;
+    color: black;
+}
+.paydetail{
+    flex-grow: 1;
+    margin-left: 10%;
 }
 .payfin{
-    margin: 2%;
-    border: 1px black solid;
-    border-radius: 5px;
-    padding: 1% 2%;
+    flex-grow: 1;
+    margin-top: 5%;
+}
+.paynow{
+    flex-grow: 1;
+    margin-top: 7%;
 }
 .paynow a{
     text-decoration: none;
