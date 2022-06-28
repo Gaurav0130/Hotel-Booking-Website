@@ -1,330 +1,180 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #e0e0e0;
-    font-family: Ubuntu, sans-serif;
-    box-sizing: border-box;
-}
-/*index header*/
-header{
-    overflow: hidden;
-    top: 0;
-    position: fixed;
-    width: 100%;
-    background-color: rosybrown;
-}
-.head-row{
-    display: flex;
-}
-.head-col:first-child {
-    flex-grow: 1;
-    margin-left: 2%;
-}
-.head-col:last-child{
-    flex-grow: 1;
-    padding: 20px 0;
-    margin-right: 2%;
-}
-.main-container a{
-    text-decoration: none;
-    color: black;
-    float: right;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Ubuntu", sans-serif;
+  overflow-x: hidden;
 }
 
-.logo{
-    height: 60px;
-    width: 60px;
+/* content css */
+#content {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-/* index container*/
-.seactionbar{
-    height: 380px;
-    background-image: url(https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+#searchdiv {
+  width: 100%;
+  height: 61vh;
+  background: url(https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg)
+    no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* background-attachment: fixed; */
 }
-
-.searchbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 380px;
+#searchbox {
+  min-width: 22%;
+  min-height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-size: medium;
+  padding-left: 10px;
 }
-.searchbar input{
-    width: 30%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f1f1f1;
-    padding: 10px;
-    padding-inline-start: 14px;
-    border-radius: 12px;
-    font-size: 16px;
-    outline: none;
-    border: none;
+#slider {
+  width: 90vw;
+  height: 30vh;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 3%;
 }
-
-.cityimg{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 40px;
-    
+.box {
+  width: 150px;
+  height: 150px;
+  /* border: 2px solid black; */
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
 }
-.citycard img{
-    border-radius: 30%;
-    height: 150px;
-    width: 150px;
-    box-shadow: 10px 10px 10px grey;
+.box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  position: absolute;
+  /* box-shadow: 5px 5px 50px rgb(0, 0, 0); */
 }
-.city-overlay{
-    margin-top: -55%;
-    margin-left: 35%;
+.city {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgb(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  overflow: hidden;
+  opacity: 0;
 }
-.city-hover:hover{
-    opacity: 0.3;
+.city:hover {
+  opacity: 1;
 }
-.viewmore{
-    text-align: center;
+#view-more {
+  width: 105px;
+  height: 30px;
+  margin-top: 2%;
+  margin-bottom: 15%;
+  /* border: 2px solid black; */
 }
-.viewmore a{
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    margin-top: 6%;
+#viewbtn {
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  border: none;
+  font-weight: bold;
+  border-radius: 3px;
+  font-size: 1rem;
 }
-/* index footer*/
-.footer{
-    background-color: rosybrown;
-    overflow: visible;
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-}
-.footer-bar{
-    display: flex;
-    justify-content:space-between;
-}
-.footer-bar #Contact{
-    padding: 20px 0;
-    margin-left: 1%;
-}
-.footer-bar #logoicon{
-    padding: 20px 0;
-    margin-right: 1%;
-}
-.footer-bar #copyright{
-    margin-top: 1%;
-}
-.footer a {
-    text-decoration: none;
-    color: black;
-}
-.copyright{
-    font-size: 10px;
-    color: black;
-}
-/*list.html*/
-#list-view h3 h5{
-    text-decoration: none;
-    color: black;
-}
-#list-view img {
-    width: 250px;
-    height: 200px;
-}
-/* list content img*/
-.list-view{
-    width: 100%;
-    height: auto;
-    margin-top: 4%;
-}
-.list-view ul{
-    list-style-type: none;
-    display: flex;
-    margin: 0 40%;
+#viewbtn a {
+  text-decoration: none;
+  color: white;
 }
 
-.list-view ul li a{
-    color: black;
-    text-decoration: none;
-}
-.list-view ul li:last-child{
-    flex-grow: 1;
-}
-.list-view ul li:first-child{
-    flex-grow: 1;
-}
-#map-view{
-    display: none;
-    visibility: hidden;
-}
-.cityimglist{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.citydescription{
-    margin: 2% 4%;
-}
-#list-view{
-    display: flex;
-    background-color: lightgray;
-}
-#list-view a{
-    display: flex;
-    text-decoration: none;
-    color: black;
-}
-#list-view-col:last-child{
-    padding: 0 5%;
-    width: 250px;
-}
-.list-view-row{
+/* index page responsive css */
+
+@media screen and (max-width: 850px) {
+  #slider {
+    width: 60vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+    column-gap: 20%;
+    row-gap: 5%;
     margin-top: 5%;
-}
-/* detial.html*/
-.detailimg{
-    margin: 2% 4% 0 4%;
-}
-
-.DeltailDes{
-    margin: 1% 4% 2% 4%;
-}
-.detailimgform{
-    display: flex;
-    margin: 8% 2%;
-    border: 1px solid black;
-    height: 400px;
-
-}
-.detailimg{
-    flex-grow: 3;
-}
-.detailimg img{
-    max-width: 400px;
-    max-height: 350px;
-    margin:0 22%;
-}
-.detailfrom{
-    flex-grow: 1;
-    border-left: 1px solid black;
-}
-/* detail delete*/
-#detailboxform {
-    width: 40%;
-    height: 100%;
   }
-  
-  #detailboxformdiv2 {
-    width: 93%;
-    height: 85%;
+
+  #view-more {
+    margin-bottom: 20%;
+  }
+  .city {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 645px) {
+  #slider {
+    width: 58vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+    column-gap: 13%;
+    row-gap: 5%;
+    margin-top: 5%;
+  }
+
+  .box {
+    width: 130px;
+    height: 130px;
+    /* border: 2px solid black; */
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+
+  .city {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #slider {
+    width: 90vw;
+    height: auto;
+    /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    /* border: 1px solid rgb(187, 21, 21); */
   }
-  
-  .formaitam {
-    width: 80%;
-    height: 10%;
-    /* border: 1px solid rgb(0, 0, 0); */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bold;
-  }
-  
-  .formaitam input {
-    width: 50%;
-    height: 65%;
-  }
-  
-  #bookbtn {
-    width: 80px;
-    height: 30px;
-    font-weight: bold;
-    overflow: hidden;
-  }
-/* footer icon */
-#logoicon img{
-    height: 20px;
-    width: 22px;
-}
-.copyright:before{
-    content: '\00A9';
-}
-/*Contact.html*/
-.contact-us{
-    padding: 10px;
-}
-/*login.html*/
-.login{
-    padding: 10px;
-}
-/*payment*/
-.detailimg img{
-    height: 500px;
-    width: 500px;
-}
-
-.paymentimg img{
-    height: 240px;
-    width: 300px;
-    flex-grow: 1;
-}
-.payhotdesc{
-    flex-grow: 2;
-    pad: 6% 6% 6% 2%;
-}
-.paydetail{
-    margin: 2%;
-}
-.payimgdesc{
-    background-color:rgb(132,136,139);
-    width: 53%;
-    height: 20%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
-    display: flex;
-}
-.paydetailall{
-    display: flex;
-    border: 1px solid black;
-    margin: 5%;
-    border-radius: 5px;
-    background-color: rosybrown;
-    color: black;
-}
-.paydetail{
-    flex-grow: 1;
-    margin-left: 10%;
-}
-.payfin{
-    flex-grow: 1;
-    margin-top: 5%;
-}
-.paynow{
-    flex-grow: 1;
+  .box {
+    width: 150px;
+    height: 150px;
     margin-top: 7%;
-}
-.paynow a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-.loader {
-    border: 12px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 12px solid #444444;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* border: 2px solid black; */
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+  #view-more {
+    width: 20%;
+    height: 30px;
+    margin-top: 5%;
+    margin-bottom: 20%;
+    /* border: 2px solid black; */
+  }
+  .city {
+    font-size: 1.3rem;
+  }
 }
