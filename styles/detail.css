@@ -3,12 +3,10 @@
   padding: 0px;
   overflow-x: hidden;
 }
-
 #detailcontent {
   width: 100vw;
   height: auto;
 }
-
 #detailformbox {
   width: 90vw;
   height: 70vh;
